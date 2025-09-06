@@ -1,0 +1,26 @@
+name: ui
+description: A Very Good Project created by Very Good CLI.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+  flutter: ^3.32.0
+
+dependencies:
+  application:
+    path: ../application
+  cached_network_image: ^3.4.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.0
+  get_it: ^7.2.0
+  intl: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^9.0.0
+
+scripts: ../../derry.yaml

@@ -1,0 +1,20 @@
+# Register bricks which can be consumed via the Mason CLI.
+# Run "mason get" to install all registered bricks.
+# To learn more, visit https://docs.brickhub.dev.
+bricks:
+  bloc:
+    git:
+      url: https://github.com/kurtishill/flutter-bricks.git
+      path: bloc
+  model:
+    git:
+      url: https://github.com/kurtishill/flutter-bricks.git
+      path: model
+  repo:
+    git:
+      url: https://github.com/kurtishill/flutter-bricks.git
+      path: repo
+  screen:
+    git:
+      url: https://github.com/kurtishill/flutter-bricks.git
+      path: screen

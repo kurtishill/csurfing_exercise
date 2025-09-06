@@ -1,0 +1,38 @@
+name: csurfing_exercise
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  application:
+    path: packages/application
+  bloc: ^9.0.0
+  data:
+    path: packages/data
+  domain:
+    path: packages/domain
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_localizations:
+    sdk: flutter
+  get_it: ^7.2.0
+  ui:
+    path: packages/ui
+
+dev_dependencies:
+  build_runner: ^2.4.4
+  flutter_gen_runner: ^5.1.0+1
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^9.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+scripts: derry.yaml

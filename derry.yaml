@@ -1,0 +1,73 @@
+build:
+  web: flutter build web -t lib/main_development.dart
+  run: flutter packages pub run build_runner build --delete-conflicting-outputs
+  watch: flutter packages pub run build_runner watch --delete-conflicting-outputs
+  clean: flutter packages pub run build_runner clean build
+
+pub:
+  _get:
+    application:
+      - cd packages/application && flutter pub get
+    data:
+      - cd packages/data && flutter pub get
+    domain:
+      - cd packages/domain && flutter pub get
+    ui:
+      - cd packages/ui && flutter pub get
+    root:
+      - flutter pub get
+  _upgrade:
+    application:
+      - cd packages/application && flutter pub upgrade
+    data:
+      - cd packages/data && flutter pub upgrade
+    domain:
+      - cd packages/domain && flutter pub upgrade
+    ui:
+      - cd packages/ui && flutter pub upgrade
+    root:
+      - flutter pub upgrade
+  _clean:
+    application:
+      - cd packages/application && rm -rf pubspec.lock && flutter clean
+    data:
+      - cd packages/data && rm -rf pubspec.lock && flutter clean
+    domain:
+      - cd packages/domain && rm -rf pubspec.lock && flutter clean
+    ui:
+      - cd packages/ui && rm -rf pubspec.lock && flutter clean
+    root:
+      - rm -rf pubspec.lock && flutter clean
+  get:
+    - $pub:_get:application
+    - $pub:_get:data
+    - $pub:_get:domain
+    - $pub:_get:ui
+    - $pub:_get:root
+  update:
+    - $pub:_upgrade:application
+    - $pub:_upgrade:data
+    - $pub:_upgrade:domain
+    - $pub:_upgrade:ui
+    - $pub:_upgrade:root
+  major:
+    - $pub:update -- --major-versions
+  clean:
+    - $pub:_clean:application
+    - $pub:_clean:data
+    - $pub:_clean:domain
+    - $pub:_clean:ui
+    - $pub:_clean:root
+
+clean:
+  pod:
+    - cd ios && pod deintegrate
+    - cd ios && rm -f Podfile.lock
+    - cd ios && pod install --repo-update
+  dep:
+    - rm -rf pubspec.lock
+    - $pub:clean
+    - $pub:get
+  proj:
+    - $clean:dep
+    - $clean:pod
