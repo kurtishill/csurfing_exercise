@@ -9,8 +9,8 @@
 
 - The app was built using a simple Clean Architecture, containing UI, presentation, domain, and data layers.
 - UI layer: Flutter package. Contains all screens, views, and components, including injection points of Blocs.
-- Presentation layer: Dart package. Contains all code related to the application, including state mamagement. The app's Blocs are here. Also has wiring file for defining Bloc dependency injection.
-- Domain layer: Dart package. Contains entities and data source interface definitions to allow Blocs to access data sources (dep inversion).
+- Presentation layer: Dart package. Contains all code related to the application, including state management. The app's Blocs are here. Also has wiring file for defining Bloc dependency injection.
+- Domain layer: Dart package. Contains entities and data source interface definitions to allow Blocs to access data sources.
 - Data layer: Dart package. Contains data source implementations. Also has wiring file for defining data source dependency injection.
 
 ## Assumptions
