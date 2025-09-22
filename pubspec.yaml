@@ -24,7 +24,7 @@ dependencies:
     path: packages/ui
 
 dev_dependencies:
-  build_runner: ^2.4.4
+  build_runner: ^2.8.0
   flutter_gen_runner: ^5.1.0+1
   flutter_test:
     sdk: flutter
