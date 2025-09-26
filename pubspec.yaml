@@ -9,7 +9,7 @@ environment:
 dependencies:
   application:
     path: packages/application
-  bloc: ^9.0.0
+  bloc: ^9.0.1
   data:
     path: packages/data
   domain:
